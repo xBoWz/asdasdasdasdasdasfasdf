@@ -1,27 +1,32 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
 const client = new Discord.Client();
 const prefix = '+'
+
 client.on('ready', () => {
-  console.log('╔[════════════════════════════════════]╗');
-  console.log('')
-  console.log('            ╔[════════════]╗')
-  console.log('              Bot Is Online')
-  console.log('            ╚[════════════]╝')
-  console.log('')
   console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
   console.log('')
   console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log('')
   console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log('')
+  console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
+  console.log('')
 });
-client.on('ready', () => {
-     client.user.setActivity("Alpha For Ever",{type: 'WATCHING'})
-
-});
-
 
 client.on("message", message => {
     if (message.content === (prefix + "fsdfasdf")) {
@@ -3878,5 +3883,6 @@ if (message.content.startsWith('صراحة')) {
   message.react("??")
 }
 });
+
 
 client.login(process.env.BOT_TOKEN);
